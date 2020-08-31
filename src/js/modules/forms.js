@@ -1,4 +1,4 @@
-/* import checkNumInputs from './checkNumInputs'; */
+import {postData} from '../services/requests';
 
 const forms = () => {
  /*  получаем элементы которые нам понадобятся */
@@ -24,15 +24,6 @@ const forms = () => {
     question: 'assets/question.php'
   };
 
-  /* функция отвечающая за отправку запроса */
-  const postData = async (url, data) => {
-    let res = await fetch(url, {
-      method: "POST",
-      body: data
-    });
-
-    return await res.text();
-  };
 
   /* функция по очищению */
   const clearInputs = () => {
